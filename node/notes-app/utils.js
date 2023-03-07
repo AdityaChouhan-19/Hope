@@ -2,5 +2,9 @@ console.log('utils.js')
 
 const name = 'Aditya'
 
-//exporting name variable
-module.exports = name;
+const add = function(a, b){
+    return a+b
+}
+
+//exporting add function
+module.exports = add;

@@ -1,6 +1,7 @@
-const firstName = require('./utils') //you can required another custon file and runnig the main file will execute the code in the other file too.
+const addition = require('./utils') 
+//using exported add function of utils naming for reguire thing can change
 
-//const name = 'Aditya'
+const sum = addition(3,13)
+console.log(sum)
 
-//you can even use variable from other file, but order to do that you need to export them first form the file they exist in.
-console.log(firstName)
+console.log(addition(2,3))
