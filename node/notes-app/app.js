@@ -12,4 +12,4 @@ console.log(YourNotes);
 
 console.log(validator.isEmail('aditya@gmail.com')); //returns true if valid and vice-versa; for detailed info check npm website. 
 
-console.log(validator.isUrl('http://google.com'));
+console.log(validator.isURL('http://google.com'));
