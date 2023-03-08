@@ -1,15 +1,12 @@
-const Notes = require('./notes');
+const chalk = require('chalk');
+const notes = require('./notes');
 
-console.log(Notes());
-//or
-const YourNotes = Notes();
-console.log(YourNotes);
+const cmdWord = process.argv[2]; //storing the third item in argv array in variable cmdWord;
 
-//process has all the command line argument stored that we pass in cmd
+if (cmdWord === 'add') {
+    console.log('add...')
+} else if (cmdWord === 'remove') {
+    console.log('remove...')
+}
 
-const l = console.log
-
-l(process.argv)
-l(process.argv[2])
-
-//use node app Aditya in cmd to know what's happening
+//use node app add/remove in cmd to see what's happening!
