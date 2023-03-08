@@ -1,15 +1,15 @@
-//npm init
-//npm i {package name} validator
-
-const validator = require('validator');
-
 const Notes = require('./notes');
 
-//console.log(Notes());
+console.log(Notes());
 //or
 const YourNotes = Notes();
 console.log(YourNotes);
 
-console.log(validator.isEmail('aditya@gmail.com')); //returns true if valid and vice-versa; for detailed info check npm website. 
+//process has all the command line argument stored that we pass in cmd
 
-console.log(validator.isURL('http://google.com'));
+const l = console.log
+
+l(process.argv)
+l(process.argv[2])
+
+//use node app Aditya in cmd to know what's happening
