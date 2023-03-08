@@ -4,30 +4,26 @@ const yargs = require('yargs');
 
 const notes = require('./notes');
 
-//command keyord in yargs
-
-//it calls the handler function if the keyword describle in "command:" property is detected in the cmd  
-//for add
 yargs.command({
-    command: 'add',//property
-    describe: 'Add notes',//property
+    command: 'add',
+    describe: 'Add notes',
     builder: {
         title: {
             describe: 'title',
-            demandOption: true,// this property means that this flag is mandatory (node app add --title)
-            type: 'string'//input type from cmd
+            demandOption: true,
+            type: 'string'
         },
         body: {
             describe: 'Body..',
             demandOption: true,
             type: 'string'
         }
-    },//property
+    },
     handler: function (argv) {
         console.log('Title: ' + argv.title)
-        console.log('Body:', argv.body) //node app add --title="Yo man" --body="Tera baaap"
-    }//property
-})//node app add
+        console.log('Body:', argv.body)
+    }
+})
 
 //for remove
 yargs.command({
@@ -36,7 +32,7 @@ yargs.command({
     handler: function () {
         console.log('removing note..')
     }
-})//node app remove --doing so will call the function created inside this yargs command
+})
 
 //for list
 yargs.command({
@@ -45,7 +41,7 @@ yargs.command({
     handler: function () {
         console.log('listing the notes..')
     }
-})//node app list
+})
 
 //for read
 yargs.command({
@@ -54,8 +50,6 @@ yargs.command({
     handler: function () {
         console.log('reading notes..')
     }
-})//node app read
+})
 
-// console.log(yargs.argv) // you will either have to use this
-//or
-yargs.parse(); // or this otherwise code in function of add command property wouldn't work
+yargs.parse();
