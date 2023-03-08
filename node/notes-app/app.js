@@ -16,10 +16,16 @@ yargs.command({
             describe: 'title',
             demandOption: true,// this property means that this flag is mandatory (node app add --title)
             type: 'string'//input type from cmd
+        },
+        body: {
+            describe: 'Body..',
+            demandOption: true,
+            type: 'string'
         }
     },//property
     handler: function (argv) {
-        console.log('adding notes..', argv) 
+        console.log('Title: ' + argv.title)
+        console.log('Body:', argv.body) //node app add --title="Yo man" --body="Tera baaap"
     }//property
 })//node app add
 
